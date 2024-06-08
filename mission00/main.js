@@ -33,7 +33,7 @@ function getNumberAtArray(arr, index) {
 }
 
 function getNumberAtArray2(arr, index) {
-  return arr[index] ?? undefined; // 하지만 이는 에러를 핸들링하는 것이 아닌, 단순히 값이 있으면 해당 값을, 없으면 undefined를 발생시킴.
+  return arr[index] ?? "undefined"; // 하지만 이는 에러를 핸들링하는 것이 아닌, 단순히 값이 있으면 해당 값을, 없으면 "undefined" 텍스트를 반환시킴.
 }
 
 const getNumberAtArray3 = (arr, index) => {
