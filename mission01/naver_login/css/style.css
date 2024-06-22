@@ -244,6 +244,22 @@ body {
   display: block;
 }
 
+.error-message-visible {
+  display: block;
+}
+
+/*로그인 실패 메시지*/
+.login-failed-message {
+  color: red;
+  display: none;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.login-failed-message-visible {
+  display: block;
+}
+
 /* 공통 로그인 상태 유지 체크박스 */
 .login-state {
   position: relative;
@@ -276,11 +292,11 @@ body {
   background-image: url(./../images/icon-checked.svg);
 }
 
-.welcome{
+.welcome {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 5rem;
   font-weight: bold;
 }
