@@ -80,6 +80,10 @@ console.log(getNumberAtArray(numbers, 4)); // 50
 
 //범쌤 코드
 
+function isObject(data) {
+  return Object.prototype.toString.call(data).slice(8, -1).toLowerCase() === "object";
+}
+
 function getValueAtObject(obj, key) {
   if (typeof key !== "string") {
     throw new TypeError("getValueAtObject 함수의 두 번째 인수는 문자 타입 이어야 합니다.");
