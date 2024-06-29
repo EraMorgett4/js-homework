@@ -160,6 +160,7 @@ if (validInput()) {
 - 로그인을 처리하는 함수 `loginHandler()`입니다.
   <br/>
 
+<<<<<<< HEAD
       ```js
       function loginHandler(event) {
         event.preventDefault(); // 입력이 잘못되었음에도 제출하여 다른 페이지로 넘어가지 않도록 합니다.
@@ -179,6 +180,27 @@ if (validInput()) {
         }
       }
       ```
+=======
+  ```js
+  function loginHandler(event) {
+    event.preventDefault(); // 입력이 잘못되었음에도 제출하여 다른 페이지로 넘어가지 않도록 합니다.
+
+    const emailInput = document.getElementById("userEmail");
+    const pwInput = document.getElementById("userPassword");
+    const loginFailedMessage = document.getElementById("login-failed");
+
+    if (validInput()) {
+      if (emailInput.value === user.id && pwInput.value === user.pw) {
+        window.location.href = "welcome.html";
+      } else {
+        loginFailedMessage.classList.add("error-message-visible");
+      }
+    } else {
+      loginFailedMessage.classList.remove("error-message-visible");
+    }
+  }
+  ```
+>>>>>>> c8735da030555469c4d3ccca435c5f3413f0aff5
 
   - `event.preventDefault()` 를 통해 잘못된 입력에도 제출하여 다른 페이지로 넘어가지 않도록 방지합니다. 이는 JS에서 이벤트 핸들러 함수 내에서 호출 시, 해당 이벤트의 기본 동작(폼 제출 시 페이지가 새로고침 되는것)을 취소합니다.
 
@@ -193,3 +215,12 @@ if (validInput()) {
   <br/>
 
   - 형식이 맞지 않은 경우는 `remove`하여 다른 에러메시지와 겹쳐서 나타나지 않도록 하였습니다.
+<<<<<<< HEAD
+=======
+
+### 돌아보며...
+
+- 아직은 화살표함수나, 콜백함수를 적극적으로 활용할 정도로 숙달되지 않아서 이번 과제에선 활용하지 못하였습니다. 일반적인 함수 선언으로 과제를 채웠습니다. 더불어 현재 형태에서 화살표함수로 바꾼다 하더라도, 표기만 달라진 일반함수로밖에 제가 못바꿀 것 같아서 선뜻 사용하지 못하였습니다.
+
+- 지난 토요일 기점으로 갑자기 인터넷이 끊겨 정상적인 작업이 어려웠습니다. 때문에 JS 공식 문서를 확인하면서 과제를 진행하는 데에 어려움이 있었습니다. 본가로 내려가기 전, 로컬로만 작업 후 폴더를 옮겼고, 부랴부랴 본가에서 급하게 마무리 작업 후 제출하느라 아쉬움이 많습니다. 
+>>>>>>> c8735da030555469c4d3ccca435c5f3413f0aff5
