@@ -15,6 +15,7 @@ body {
 
 .main-container {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .visual {
@@ -63,9 +64,15 @@ body {
 
 .thumbnails li {
   cursor: pointer;
-  transition: transform 1s, border-color 0.3s;
   height: auto;
   width: auto;
+  scale: 1;
+  transition: all 0.5s;
+
+  :hover {
+    transition: all 0.5s;
+    scale: 1.2;
+  }
 }
 
 .thumbnails img {
@@ -79,10 +86,6 @@ body {
   border-color: #181818;
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
 }
 .thumbnails img {
   width: 50px;
@@ -109,6 +112,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 1s;
 }
 
 .selected::before {
@@ -125,4 +129,9 @@ body {
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
   background-image: linear-gradient(var(--colorA, #fbb300), var(--colorA, #fbb300)), linear-gradient(var(--colorB, #d53e33), var(--colorB, #d53e33));
   animation: rotate 3s linear infinite;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;    
 }

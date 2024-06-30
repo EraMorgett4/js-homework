@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // 변수 선언부
   const thumbnails = document.getElementById("thumbnails");
   const mainImage = document.getElementById("main-image");
   const imageName = document.getElementById("image-name");
-  const qrInstruction = document.querySelector(".qr-instruction");
   const audioPlayer = document.getElementById("audio-player");
   const body = document.body;
   let currentUrl = data[0].url;
 
+  // 함수 선언부
   function setBgColor(colorA, colorB = "#000") {
     body.style.background = `linear-gradient(to bottom, ${colorA}, ${colorB})`;
   }
@@ -34,14 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
     element.style.setProperty("--colorB", colorB);
   }
 
+  // 요소 클릭으로 인해 발생한 Event를 정의한 함수 부
   function handleThumbnailClick(event) {
     const target = event.target.closest("li");
     if (!target) return;
 
-    // Remove 'selected' class from all thumbnails
     document.querySelectorAll(".thumbnails li").forEach((li) => li.classList.remove("selected"));
 
-    // Add 'selected' class to the clicked thumbnail
     target.classList.add("selected");
 
     const index = target.getAttribute("data-index");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setNameText(selectedData.name);
     setH1Color(selectedData.colorA, selectedData.colorB);
     setBorderColor(target, selectedData.colorA, selectedData.colorB);
-    setAudio(`./music/music${index}.mp3`); // Example path to the music file
+    setAudio(`./music/music${index}.mp3`);
     currentUrl = selectedData.url;
   }
 

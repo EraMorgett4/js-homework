@@ -8,7 +8,7 @@ const data = [
     url: "https://baram.nexon.com",
   },
   {
-    name: "Zelda",
+    name: "The Legend of Zelda",
     colorA: "#0d9263",
     colorB: "#d4ce46",
     alt: "Zelda",
